@@ -1,0 +1,189 @@
+<body class="admin-pager">
+<h1 class="blog-heading text-center">Enter Blog Details</h1>
+<div class="adminpanel">
+ <form [formGroup]="employerGroup" (ngSubmit)="employerLogin()"> 
+  <div class="container admin-panel-background">
+    <div class="row">     
+     <div class="col-md-6">
+      <div class="formss-botm">
+        <div class="title">Enter Title</div>
+           <!--<input type="text" formControlName="title" class="form-control inpform" [ngClass]="{ 'is-invalid': submitted && f.title.errors }" />
+              <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+                  <div class="eror" *ngIf="f.title.errors.required">Title is required</div>  
+              </div>  -->
+              <input type="text" formControlName="title" name="title" class="form-control inpform"
+                [ngClass]="{ 'is-invalid': employerSubmitted && fe.title.errors }">  
+              <div *ngIf="employerSubmitted && fe.title.errors" class="invalid-feedback">
+                  <div class="eror" *ngIf="fe.title.errors.required"> Title is required</div> 
+              </div>
+
+      </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="formss-botm">
+            <div class="subtitle">Enter Date</div>
+             <!-- <input type="date" formControlName="date" class="form-control inpform" [ngClass]="{ 'is-invalid': submitted && f.date.errors }" />
+                <div *ngIf="submitted && f.date.errors" class="invalid-feedback">
+                    <div class="eror" *ngIf="f.date.errors.required">Title is required</div>   
+                </div> -->
+                <input type="date" formControlName="date" name="date" class="form-control inpform"
+                  [ngClass]="{ 'is-invalid': employerSubmitted && fe.date.errors }"> 
+                  <div *ngIf="employerSubmitted && fe.date.errors" class="invalid-feedback">
+                      <div class="eror" *ngIf="fe.date.errors.required"> Date is required</div>  
+                  </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="formss-botm">
+        <div class="subtitle">Enter Sub Title</div>
+         <!-- <input type="text" formControlName="subtitle" class="form-control inpform" [ngClass]="{ 'is-invalid': submitted && f.subtitle.errors }" />
+          <div *ngIf="submitted && f.subtitle.errors" class="invalid-feedback">
+              <div class="eror" *ngIf="f.subtitle.errors.required">Sub title is required</div>   
+          </div> -->
+          <input type="text" formControlName="subtitle" name="subtitle" class="form-control inpform"
+            [ngClass]="{ 'is-invalid': employerSubmitted && fe.subtitle.errors }"> 
+            <div *ngIf="employerSubmitted && fe.subtitle.errors" class="invalid-feedback"> 
+                <div class="eror" *ngIf="fe.subtitle.errors.required"> Subtitle is required</div>    
+            </div>
+      </div>
+   </div>
+
+    <div class="col-md-6">
+        <div class="formss-botm">
+          <label class="filecontent">     
+           <!-- <input type="file" formControlName="file"  class="form-control file" [ngClass]="{ 'is-invalid': submitted && f.file.errors }" />
+            <div *ngIf="submitted && f.file.errors" class="invalid-feedback">
+                <div class="eror file" *ngIf="f.file.errors.required">Select a file</div>    
+            </div> --> 
+              <input type="file" formControlName="file" name="file" class="form-control inpform file"
+                [ngClass]="{ 'is-invalid': employerSubmitted && fe.file.errors }">  
+              <div *ngIf="employerSubmitted && fe.file.errors" class="invalid-feedback">
+                  <div class="eror file" *ngIf="fe.file.errors.required"> File is required</div>  
+              </div>
+          </label>
+        </div>
+    </div>
+    
+
+    <div class="col-md-6">
+      <div class="formss-botm">  
+        <div class="subtitle">Enter Content</div> 
+          <!--<textarea rows="4" cols="50" formControlName="content" class="form-control inpform" [ngClass]="{ 'is-invalid': submitted && f.content.errors }" > </textarea>
+            <div *ngIf="submitted && f.content.errors" class="invalid-feedback">
+                <div class="eror" *ngIf="f.content.errors.required">Sub title is required</div>   
+            </div> -->
+            <textarea rows="4" cols="50" formControlName="content" class="form-control inpform"
+                [ngClass]="{ 'is-invalid': employerSubmitted && fe.content.errors }">  </textarea>
+              <div *ngIf="employerSubmitted && fe.content.errors" class="invalid-feedback">
+                  <div class="eror" *ngIf="fe.content.errors.required"> Content is required</div> 
+              </div> 
+      </div>
+   </div>
+
+    
+    <div class="col-md-6">
+      <div class="formss-botm">
+          <!--<button [disabled]="loading" class="admin-btn btn">Submit</button>  --> 
+          <button class="admin-btn btn btn-default">Login</button>
+    </div>
+   </div>
+
+    </div>
+   </div> 
+</form>
+
+
+<form [formGroup]="candidateGroup" (ngSubmit)="seekerLogin()">        
+  <h1 class="blog-heading text-center">Enter Gallery</h1>
+    <div class="container admin-panel-background my-4">
+      <div class="row">
+       <div class="col-md-8">
+          <div id='TextBoxesGroup' class="d-flex my-2">  
+              <div id="TextBoxDiv" class="d-flex">
+              </div>
+          </div> 
+          <div class="field_wrapper">   
+            <div class="fileinput btnnn">     <span> Add image</span>
+              <input type="file"  class="btnnn galrinputt">
+                <span class="testicon"> <i class="fa fa-plus galryplus add_button" aria-hidden="true"></i> </span>
+             
+              </div>
+            </div> 
+      </div> 
+      <div class="col-md-4">
+          <div class="formss-botm">
+            <div for="title">Select Category</div>
+           <!--  <select class="category-section">
+                  <option *ngFor="let category of Category" [ngValue]="category">{{category}}</option> 
+                </select>  -->
+
+                <select class="category-section custom-select ng-invalid is-invalid" (change)="changeCategory($event)" formControlName="Category">
+                    <option value="">Choose your Category</option> 
+                    <option *ngFor="let category of Category" [ngValue]="category">{{category}}</option> 
+                </select>   
+                <div class="invalid-feedback" *ngIf="candidateSubmitted && Category.errors?.required">
+                    <sup>*</sup>Please enter your city name
+                  </div>
+
+                  <div *ngIf="candidateSubmitted && fc.category.errors" class="invalid-feedback">
+                      <div class="eror" *ngIf="fe.category.errors.required"> category is required</div> 
+                  </div> 
+
+               <!-- <select class="custom-select ng-invalid is-invalid" (change)="changeCity($event)" formControlName="cityName">
+                    <option value="">Choose your city</option>
+                    <option *ngFor="let city of City" [ngValue]="city">{{city}}</option>
+                  </select>  -->
+
+
+          </div>  
+       
+        </div>
+        <div class="col-md-12 d-flex justify-content-center my-2">
+           <button class="submitgalrad" type="submit">Submit</button> 
+        </div> 
+    </div>  
+   </div>  
+   
+  </form>
+ </div>
+</body> 
+
+
+<!--
+<div class="container">
+    <div class="row custom-wrapper">
+      <div class="col-md-12">
+  
+      
+        <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+          <div class="group-gap">
+            <div class="d-block my-3">
+  
+            <div class="mb-3">
+              <select class="custom-select ng-invalid is-invalid" (change)="changeCity($event)" formControlName="cityName">
+                <option value="">Choose your city</option>
+                <option *ngFor="let city of City" [ngValue]="city">{{city}}</option>
+              </select>
+  
+             
+              <div class="invalid-feedback" *ngIf="isSubmitted && cityName.errors?.required">
+                <sup>*</sup>Please enter your city name
+              </div>
+            </div>       
+            
+  
+            </div>
+          </div>
+  
+        
+            <button type="submit" class="btn btn-danger btn-lg btn-block">Submit</button>
+        </form>
+  
+      </div>
+    </div>
+  </div> -->
+
+
+

@@ -1,0 +1,38 @@
+<!--<form>
+    <div class="input">
+        <label>Username</label>
+        <input type="text" name="username" [(ngModel)]="username">
+    </div> 
+
+    <div class="input">
+            <label>Username</label>
+            <input type="password" name="password" [(ngModel)]="password">
+        </div>
+
+        <div class="input">
+                <label>Username</label>
+                <input type="submit" value="Login" (click)="LoginUser()">
+            </div>
+</form> -->
+
+
+<body class="login-page">
+  <div class="container-login100" >
+    <div class="login-centerpg"> 
+      <form class="login-form validate-form">
+        <div class="text-center loginn">
+                Log in
+        </div>
+        <div class="wrap-input100 validate-input" data-validate="Enter username">
+            <input class="logininp" type="text" name="username" [(ngModel)]="username" placeholder="Username">
+        </div>
+        <div class="wrap-input100 validate-input" data-validate="Enter password">
+            <input class="logininp" type="password" name="password"  [(ngModel)]="password" placeholder="Password">
+        </div>
+        <div class="text-center lognbtnn mt-2">
+            <input type="submit" class="login-butoon" value="Login" (click)="LoginUser()">
+        </div>
+       </form>
+     </div>
+   </div>
+</body>  

@@ -1,0 +1,74 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body {
+	background-color: #ffffff;
+    font-family: 'Quicksand', Arial, Helvetica, 'Nimbus Sans L', sans-serif;
+	font-size: 15px;
+	line-height: 23px;
+	font-weight: 400;
+	font-style: normal;
+	text-align: left;
+	overflow-x: hidden;
+	position: relative;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	background: transparent;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	outline: none;
+}
+
+span.navbar-toggler-icon {
+  width: 14px;
+  height: 24px;
+  color: black !important;
+  cursor: pointer;
+}
+.nav-link {
+  font-size: 11px;
+  color: black !important;
+
+}
+.bg-white {
+  background: white;
+}
+.text-lightblack
+{
+  color:#745656;
+ 
+}
+.fa
+{
+  margin-left: 4px;
+}
+
+.card-link {
+  text-align: right;
+  float: left !important;
+  color:#745656;
+  font-size: 17px;
+  font-weight: 600;
+}
+.card-header {
+  background: white !important;
+  border-bottom: 1px solid #d2d2d2;
+  padding-left: 0px !important;
+}
+.card {
+  border: none !important;
+  padding: 5px 0px 5px 1px;
+}
+.card-body {
+  text-align: left !important;
+  font-size: 14px;
+}
+.card-link:hover{
+  color:#e65d79 !important;
+}
+ .txt-ligtred  {
+  color: #e85773 !important;
+  font-weight: 700
+}

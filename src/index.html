@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Arch</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="logo.png">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+
+</head>
+<style> 
+input.adminfil {
+  /*display: none; */
+}
+.filecontent.content2 {
+    width: 100%;
+    margin-right: 4px;
+    line-height: 18px;
+    position: relative;
+}
+.galryplus{
+    position: absolute;
+    top: 10px;  
+    left: 8px;
+}
+.filecontent {
+  border: 1px solid #00BFB1;
+  padding: 8px 28px;
+  background: #00BFB1;
+  color: #fff;
+  width: 76%;
+  border-radius: 8px;
+  margin-top: 5px;
+  text-align: center;
+}
+#TextBoxDiv2,#TextBoxDiv3,#TextBoxDiv4,#TextBoxDiv5{
+  margin-right: 4px;
+}
+/*Newly added*/
+.fileinput.btnnn {
+    position: relative;
+}
+.galryplus {
+    position: absolute;
+    top: 3px;
+    /* left: 8px; */
+    right: 0px;
+}
+.btnnn {
+    width: 100% !important;
+}
+.btnnn{
+  border: 1px solid #EF5874;
+  padding: 12px 9px;
+  width: 23%;
+  background: #EF5874;
+  border-radius: 23px;
+  text-align: center;
+  margin-right: 5px;
+  cursor: pointer;
+  color: #fff;
+} 
+input.galrinputt {
+  /*  display: none;  */
+}
+.fileinput {
+  position: relative;
+    margin-top: 4px;
+}
+.field_wrapper.btnnn {
+    margin-top: 4px;
+}
+.fileinput.btnnn {
+  position: relative;
+  width: 18% !important; 
+  float: left;
+} 
+</style>  
+
+<body>
+  <app-root></app-root>
+ <script>
+
+/*
+AOS.init({
+  duration: 1200,
+}) */
+
+window.addEventListener('load', AOS.refresh)
+
+
+AOS.init(); 
+AOS.refresh(); 
+
+
+    $(window).scroll(function() {
+    var nav = $('.header-outer-side'); 
+    var navbar=$('.navbar'); 
+    var nav2 = $('.header');
+    var logo=$('.logo-img'); 
+    var topicon=$('.active1');
+    var top = 100;
+    if ($(window).scrollTop() >= top) {
+        nav.addClass('fixed');
+        nav2.addClass('none');    
+        navbar.addClass('navbarheight');  
+        logo.addClass('logosz');  
+        topicon.addClass('active2');
+    } else {
+        nav.removeClass('fixed');
+        nav2.removeClass('none');     
+        navbar.removeClass('navbarheight');  
+        logo.removeClass('logosz');  
+        topicon.removeClass('active2');  
+    }
+});
+
+var a = 0;
+top=100;
+$(window).scroll(function() {
+  var oTop = $('.numberanimate').offset().top - window.innerHeight;
+  if (a == 0 && $(window).scrollTop() > oTop) {
+      $('.count-info').each(function() { 
+        var $this = $(this),
+        countTo = $this.attr('data-count');
+        $({
+        countNum: $this.text()
+        }).animate({
+        countNum: countTo
+        },
+        {
+        duration: 3000,
+        easing: 'swing',
+        step: function() {
+        $this.text(Math.floor(this.countNum));
+        },
+        complete: function() {
+        $this.text(this.countNum);
+        }
+
+    });
+    });  
+    a = 1;
+  }
+});
+
+/*
+$(document).ready(function(){
+var counter = 2;
+$("#addButton").click(function () {
+    if(counter>5){
+          alert("Maximum 5 images allowed");
+          return false;
+    }   
+    var newTextBoxDiv = $(document.createElement('div')).attr("id", 'TextBoxDiv' + counter);
+    newTextBoxDiv.after().html('<label class="filecontent content2">'+'Upload Image'+'<i aria-hidden="true" class="fa fa-plus galryplus"></i>' +'<input type="file" class="adminfil" name="image' + counter + 
+      '" id="textbox' + counter + '" value="" >'+ '  </label>');
+    newTextBoxDiv.appendTo("#TextBoxesGroup");
+    counter++;  
+ });
+
+ $("#removeButton").click(function () {
+      if(counter==2){
+            alert("Minimum 1 image is required");
+            return false;
+        }   
+      counter--;
+          $("#TextBoxDiv" + counter).remove();
+    });
+
+    $("#getButtonValue").click(function () {
+    var msg = '';
+    for(i=1; i<counter; i++){
+      msg += "\n Textbox #" + i + " : " + $('#textbox' + i).val();
+    }
+        alert(msg);
+    });
+});
+*/
+
+/*
+$(document).ready(function(){
+  $('.galryplus').click(function(){
+       var clone=$(this).parent();
+       $('butonparnt').append('clone');
+      alert('clicked');
+  });
+});  */
+
+
+
+
+$(document).ready(function(){
+    var maxField = 5; //Input fields increment limitation
+    var addButton = $('.add_button'); //Add button selector
+    var wrapper = $('.field_wrapper'); //Input field wrapper
+    var fieldHTML = '<div class="field_wrapper"><div class="fileinput btnnn"><i class="fa fa-plus galryplus add_button" aria-hidden="true"></i>'+'<span class="admige"> Add Image </span>'+'<input type="file" class="btnnn galrinputt"> </a></div></div>'; //New input field html 
+    var x = 1; //Initial field counter is 1  
+      
+    //Once add button is clicked  
+  //  $('button .delete-row').on('click', function(){
+
+   // $(addButton).on('click',function(){  
+      $(document).on('click','.add_button',function(e){ 
+        //Check maximum number of input fields 
+        if(x < maxField){ 
+            x++; //Increment field counter
+            $(wrapper).append(fieldHTML); //Add field html
+        }
+        else{
+          alert('Maximum 5 images allowed')
+        }
+     
+    });
+    
+    //Once remove button is clicked
+  
+});
+
+
+    </script>
+</body>
+</html>
