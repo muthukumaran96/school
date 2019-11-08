@@ -379,7 +379,7 @@ p.learn-link {
 }
 .sub-txt-techer {
   font-size: 13px;
-  color: #90605a;
+  color: #282828;
 }
  .learn-more {
   padding: 18px;
@@ -1485,4 +1485,6 @@ background-position: right bottom !important;
   margin: 0 auto;
   text-align: center;
 }
-   
+.fontsz {
+  font-size: 26px !important;
+}

@@ -38,7 +38,7 @@
 	;
 	font-family: 'Quicksand', Arial, Helvetica, 'Nimbus Sans L', sans-serif;
 	font-weight: 700;
-	color: #745656 !important;
+	color: #282828 !important;
 }
 .active1 {
 	color: white !important;
@@ -292,3 +292,6 @@
     top: 0px; 
 }
 
+.offer-tabs .gallery {
+    margin-top: 0px !important;
+}
