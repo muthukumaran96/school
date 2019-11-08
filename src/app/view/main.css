@@ -1194,6 +1194,8 @@ ul.galryul {
 }  
 
 
+
+
 .classroomimg{
   background: url('../../assets/images/lndscp5.png') no-repeat center center fixed; 
   background-size: cover;
@@ -1471,5 +1473,16 @@ background-position: right bottom !important;
       background-position: left bottom !important;
       color: white !important; 
       background: linear-gradient( to left, #ebebeb 50%,     red 50% ) !important;
-  } 
-   */ 
+} 
+*/ 
+
+/*8.11.19 css*/
+.paddourtm {
+  width: 84%;
+  margin: 0 auto;
+  text-align: center;
+}
+.admissionimg{
+  background: url('../../assets/images/childgall.jpg') no-repeat center center fixed; 
+  background-size: cover;
+} 

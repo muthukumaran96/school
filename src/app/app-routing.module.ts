@@ -10,6 +10,11 @@ import{ContactComponent}  from './view/contact.component'
 import{BlogComponent}  from './view/blog.component'
 import{AdminComponent} from './view/admin.component'   
 import{LoginComponent} from './view/login.component'   
+
+import{OurteamComponent} from './view/ourteam.component'  
+import{AdmissionComponent} from './view/admission.component'  
+
+
 import { from } from 'rxjs';
 const routes: Routes = [
 
@@ -20,7 +25,10 @@ const routes: Routes = [
   {path:'contact',component:ContactComponent,data: {title: 'Contact'}},
   {path:'blog',component:BlogComponent,data: {title: 'Blog'}},
   {path:'admin',component:AdminComponent,data: {title:'Admin'}},  
-  {path:'login',component:LoginComponent,data: {title:'Login'}}  
+  {path:'login',component:LoginComponent,data: {title:'Login'}},
+  {path:'ourteam',component:OurteamComponent,data: {title:'Ourteam'}},
+  {path:'admission',component:AdmissionComponent,data: {title:'Admission'}}  
+  
 
 
 

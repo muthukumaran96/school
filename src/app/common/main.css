@@ -124,14 +124,14 @@
 	display: none; 
 }
 .logo-img { 
-    width: 136px;
+    width: 180px;
     height: unset;  
 }
 .navbarheight{
 	height: 72px; 
 }
 .logosz{
-	width: 105px; 
+	width: 136px; 
 }
 .header-main-contentt {
     width: 70%;
@@ -276,12 +276,12 @@
 */
 .active1:before {
     background: url("../../assets/images/kite.png");
-    background-size: cover;
+	background-size: cover;
     display: block;
     content: "";
-    height: 24px;
+    height: 34px;
     background-repeat: no-repeat !important;
-    width: 26px;
+    width: 32px;
     position: absolute;
     top: 3px;
 }

@@ -16,11 +16,19 @@ import{BlogComponent}  from './view/blog.component';
 import{AdminComponent} from './view/admin.component';
 import{LoginComponent} from './view/login.component';
 
+import{OurteamComponent} from './view/ourteam.component';
+import{AdmissionComponent} from './view/admission.component';
+
+
+
+
 import { ReactiveFormsModule } from '@angular/forms';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ModalModule } from 'ngx-bootstrap/modal'; 
+
+
 
 
 @NgModule({
@@ -35,7 +43,9 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     ContactComponent,
     BlogComponent,
     AdminComponent,
-    LoginComponent
+    LoginComponent,
+    OurteamComponent,
+    AdmissionComponent
 
   ],
   imports: [
