@@ -1489,3 +1489,10 @@ background-position: right bottom !important;
 .fontsz {
   font-size: 26px !important;
 }
+.map, .map2 {
+  height: 270px !important;
+  overflow: hidden;
+}
+.map, .map2  {
+  margin-bottom: 10px;
+}
