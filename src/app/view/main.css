@@ -1193,16 +1193,19 @@ ul.galryul {
   cursor: pointer;
 }  
 
-
-
-
-.classroomimg{
+.admissionimg{
   background: url('../../assets/images/lndscp5.png') no-repeat center center fixed; 
   background-size: cover;
 }
+
+
+.classroomimg{
+  background: url('../../assets/images/lndscp9.png') no-repeat center center fixed; 
+  background-size: cover;
+} 
 .gallerypageimg{
   background: url('../../assets/images/lndscp11.png') no-repeat center center fixed;
-  background-size: cover;
+  background-size: cover; 
 } 
 .gallerypageimg .pg-title {
 /*  background: #EF5874; */
@@ -1482,7 +1485,4 @@ background-position: right bottom !important;
   margin: 0 auto;
   text-align: center;
 }
-.admissionimg{ 
-  background: url('../../assets/images/childgall.jpg') no-repeat center center fixed; 
-  background-size: cover;
-}     
+   
