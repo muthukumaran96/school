@@ -5,7 +5,7 @@ import * as AOS from 'aos';
 
      templateUrl:'./admission.component.html',
      selector:'app-admission',
-     styleUrls:['./main.css']
+     styleUrls:['./main.css'] 
 
  
 })
@@ -20,3 +20,4 @@ export class AdmissionComponent
           
         } 
 }
+
