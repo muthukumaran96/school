@@ -72,3 +72,7 @@ span.navbar-toggler-icon {
   color: #e85773 !important;
   font-weight: 700
 }
+
+body {
+  font-family: Futura,Trebuchet MS,Arial,sans-serif !important;
+}

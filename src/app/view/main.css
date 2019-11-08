@@ -1540,3 +1540,7 @@ background-position: right bottom !important;
 .col6 {
   background: #FF8000;
 } 
+
+body {
+  font-family: Futura,Trebuchet MS,Arial,sans-serif !important;
+}
