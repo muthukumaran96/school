@@ -1496,3 +1496,47 @@ background-position: right bottom !important;
 .map, .map2  {
   margin-bottom: 10px;
 }
+.outerring {
+  border-radius: 50%;
+  height: 150px !important;
+  width: 150px;
+  box-shadow: rgba(0, 0, 0, .1) 0 0 10px 5px;
+  overflow: hidden;
+  position: relative;
+}
+.usds {
+  font-size: 40px;
+  top: 24px; 
+  position: relative;
+}
+.socskle {
+  position: relative;
+  top: 34px;
+  width: 94%;
+  margin: 0 auto;
+  font-size: 14px !important;
+  line-height: 18px;
+}
+.mdd {
+  width: 89%;
+  margin: 0 auto !important;
+  margin-bottom: 30px !important;
+}
+.col1 {
+  background: #4ABCD7;
+} 
+.col2 {
+  background: #FFE401;
+} 
+.col3 {
+  background: #FF3366;
+} 
+.col4 {
+  background: #88D914;
+} 
+.col5 {
+  background: #7A68DC;
+} 
+.col6 {
+  background: #FF8000;
+} 
