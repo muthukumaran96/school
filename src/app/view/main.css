@@ -655,7 +655,8 @@ li.active > .indicator-ico {
 }
 .acc-cont {
   padding-top: 41px;
-  padding-left: 135px;
+ /* padding-left: 135px; */
+ padding-left: 50px;
   padding-bottom: 29px;
 }
 
@@ -998,7 +999,7 @@ background-size: cover;
   padding: 2px 8px;
 }
 .card-link {
-  color: #745656 !important; 
+  color: #282828 !important; 
 }
 
 /*Galley affect*/
